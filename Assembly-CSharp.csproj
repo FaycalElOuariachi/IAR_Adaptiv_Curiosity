@@ -45,12 +45,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Environnement\Action.cs" />
+     <Compile Include="Assets\Scripts\Environnement\Expert.cs" />
      <Compile Include="Assets\Scripts\Environnement\Jouet.cs" />
      <Compile Include="Assets\Scripts\Environnement\Robot.cs" />
      <Compile Include="Assets\Scripts\Environnement\Simulation.cs" />
+     <Compile Include="Assets\Scripts\Environnement\Situation.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
-     <Compile Include="Assets\Scripts\Jouet.cs" />
-     <Compile Include="Assets\Scripts\Robot.cs" />
+     <Compile Include="Assets\Scripts\JouetIllusion.cs" />
+     <Compile Include="Assets\Scripts\RobotIllusion.cs" />
+     <Compile Include="Assets\Scripts\Utils\Couple.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>G:/Ciels/Flower/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

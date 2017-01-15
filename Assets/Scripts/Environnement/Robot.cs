@@ -11,6 +11,8 @@ namespace IAR_AdaptiveCuriosity {
 
 		// ========= Attributs principaux du robots ========= //
 
+		public Jouet jouet;
+
 		/**
 		 * Position du robot dans l'espace
 		 */
@@ -149,6 +151,14 @@ namespace IAR_AdaptiveCuriosity {
 
 			x = Mathf.Max(Mathf.Min (x + x_prime, dimensionsSalle.x - rayon), -dimensionsSalle.x + rayon);
 			z = Mathf.Max(Mathf.Min (z + z_prime, dimensionsSalle.z - rayon), -dimensionsSalle.z + rayon);
+		}
+
+		public Situation getSituation() {
+			return new Situation (this, jouet);
+		}
+
+		public Action getAction() {
+			return new Action (roueDroite, roueGauche, frequenceSon);
 		}
 
 	}

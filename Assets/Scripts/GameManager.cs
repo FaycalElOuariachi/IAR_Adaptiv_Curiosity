@@ -7,9 +7,13 @@ public class GameManager : MonoBehaviour {
 
 	public Simulation simulation;
 
-	public Robot robot;
+	public RobotIllusion robot;
 
-	public Jouet jouet;
+	public JouetIllusion jouet;
+
+	private bool flag = true;
+	private int counter = 0;
+
 
 	// Use this for initialization
 	void Start () {
@@ -20,6 +24,16 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		while (flag) {
+			counter++;
+			if (counter < 10000) {
+				simulation.step ();
+			}
+			else {
+				flag = false;
+			}
+		}
+		Debug.Log (counter);
 		simulation.step ();
 	}
 }

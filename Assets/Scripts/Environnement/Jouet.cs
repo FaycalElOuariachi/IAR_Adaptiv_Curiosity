@@ -141,7 +141,9 @@ namespace IAR_AdaptiveCuriosity {
 		}
 
 		private void jumpInto() {
-			
+			Vector3 direction = positionRobot - position;
+
+			position += direction.normalized / 20f;
 		}
 
 	}
